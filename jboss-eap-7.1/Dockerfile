@@ -1,6 +1,8 @@
 # Use latest jboss/base-jdk:8 image as the base
 FROM jboss/base-jdk:8
 
+MAINTAINER Ihsan Arif Rahman <ihsanarif@gmail.com>
+
 # Set the JBOSS_VERSION env variable
 ENV JBOSS_VERSION 7.1
 ENV JBOSS_HOME /opt/jboss/jboss-eap
