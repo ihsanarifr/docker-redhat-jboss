@@ -59,6 +59,7 @@ This project use the following ports :
 |----------------------|--------|
 | Jboss EAP Management |  10190 |
 | Jboss EAP Service    |  8280  |
+| Jboss Fuse           |  8181  |
 ___
 
 ## Clone the project
@@ -75,6 +76,12 @@ Go to the project directory :
 cd docker-redhat-jboss
 ```
 
+Start docker-compose :
+
+```sh
+docker-compose up -d
+```
+
 ### Project tree
 
 ```sh
@@ -83,6 +90,12 @@ cd docker-redhat-jboss
 ├── jboss-eap-7.1
 │    ├── source
 │    │    └── jboss-eap-{JBOSS_VERSION}.zip (you must download)
+│    └── Dockerfile
+├── jboss-fuse
+│    ├── etc
+│    │    └── users.properties
+│    ├── source
+│    │    └── jboss-fuse-{JBOSS_VERSION}.zip (you must download)
 │    └── Dockerfile
 ├── wildfly
 │    └── Dockerfile
@@ -96,9 +109,11 @@ ___
 
 1. Open your favorite browser for Jboss EAP Management:
     * [http://localhost:10190/](http://localhost:10190/)
-2. For Wildfly
+2. For Jboss Fuse:
+    * [http://localhost:8181/](http://localhost:8181/)
+3. For Wildfly
     * [http://localhost:9990/](http://localhost:9990/)
-___
+
 
 ## Help us
 
