@@ -1,4 +1,4 @@
-# Docker Redhat JBoss Product
+# Docker Red Hat JBoss Product
 
 Docker running Red Hat Jboos Product.
 
@@ -51,7 +51,8 @@ sudo apt install build-essential
 
 ### Images to use
 * [JbossJDK:8](https://hub.docker.com/r/jboss/base-jdk/)
-
+* Download [Red Hat Jboss Enterprise Application Platform (EAP) lastest version](https://developers.redhat.com/products/eap/download/?referrer=jbd)
+* Download [Red Hat Jboss Fuse lastest version](https://developers.redhat.com/products/fuse/download/)
 This project use the following ports :
 
 | Server               |  Port  |
@@ -93,10 +94,10 @@ ___
 
 ## Run the application
 
-1. Open your favorite browser :
-
-    * [http://localhost/](http://localhost/)
-
+1. Open your favorite browser for Jboss EAP Management:
+    * [http://localhost:10190/](http://localhost:10190/)
+2. For Wildfly
+    * [http://localhost:9990/](http://localhost:9990/)
 ___
 
 ## Help us
