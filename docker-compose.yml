@@ -10,6 +10,18 @@ services:
       - "10190:9990"
     networks:
       - default
+  jboss-fuse:
+    container_name: ${CONTAINER_NAME_JBOSS_FUSE}
+    build: ./jboss-fuse
+    image: jboss/fuse:${JBOSS_FUSE_VERSION}
+    ports:
+      - "8181:8181"
+      - "8101:8101" 
+      - "1099:1099" 
+      - "44444:44444" 
+      - "61616:61616"
+    networks:
+      - default
   wildfly:
     container_name: ${CONTAINER_NAME_WILDFLY}
     build: ./wildfly
