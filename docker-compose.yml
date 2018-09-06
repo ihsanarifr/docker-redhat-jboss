@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  jboss-eap:
+    container_name: ${CONTAINER_NAME_JBOSS_EAP}
+    build: ./jboss-eap-${JBOSS_EAP_VERSION}
+    image: jboss/eap:${JBOSS_EAP_VERSION}
+    ports:
+      - "8280:8080" 
+      - "10190:9990"
+    networks:
+      - default
+  wildfly:
+    container_name: ${CONTAINER_NAME_WILDFLY}
+    build: ./wildfly
+    image: jboss/wildfly:${WILDFLY_VERSION}
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+    networks:
+      - default
