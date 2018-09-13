@@ -42,3 +42,11 @@ EXPOSE 8181 8101 1099 44444 61616
 
 # Set the default command to run on boot
 CMD $JBOSS_HOME/bin/fuse server
+
+# After run install feature
+# CMD cd $JBOSS_HOME/bin && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-sql && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-gson && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-servlet && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http4
