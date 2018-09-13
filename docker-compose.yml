@@ -24,7 +24,7 @@ services:
     build: ./jboss-fuse
     image: jboss/fuse:${JBOSS_FUSE_VERSION}
     volumes:
-      - /home/ihsan/Documents/htdocs/docker/docker-redhat-jboss/jboss-fuse/deploy:/opt/jboss/jboss-fuse/deploy
+      - /home/ihsan/Documents/docker/docker-redhat-jboss/jboss-fuse/deploy:/opt/jboss/jboss-fuse/deploy
     ports:
       - "8181:8181"
       - "8101:8101" 
