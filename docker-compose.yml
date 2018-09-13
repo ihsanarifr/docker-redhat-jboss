@@ -1,6 +1,15 @@
 version: '2'
 
 services:
+  jboss-datagrid:
+    container_name: ${CONTAINER_NAME_JBOSS_DATAGRID}
+    build: ./jboss-datagrid
+    image: jboss/datagrid:${JBOSS_DATAGRID_VERSION}
+    ports:
+      - "8180:8080" 
+      - "10090:9990"
+    networks:
+      - default
   jboss-eap:
     container_name: ${CONTAINER_NAME_JBOSS_EAP}
     build: ./jboss-eap-${JBOSS_EAP_VERSION}
@@ -14,6 +23,8 @@ services:
     container_name: ${CONTAINER_NAME_JBOSS_FUSE}
     build: ./jboss-fuse
     image: jboss/fuse:${JBOSS_FUSE_VERSION}
+    volumes:
+      - /home/ihsan/Documents/htdocs/docker/docker-redhat-jboss/jboss-fuse/deploy:/home/deploy
     ports:
       - "8181:8181"
       - "8101:8101" 
