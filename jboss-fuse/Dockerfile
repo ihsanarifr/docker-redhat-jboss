@@ -49,4 +49,7 @@ CMD $JBOSS_HOME/bin/fuse server
 #     ./client -a 8101 -h localhost -u admin -p admin features:install camel-gson && \
 #     ./client -a 8101 -h localhost -u admin -p admin features:install camel-servlet && \
 #     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http4
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http4 && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-jetty && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-jsonpath && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-cxf
