@@ -35,6 +35,20 @@ services:
       - "61616:61616"
     networks:
       - default
+  jboss-fuse-7.0.1:
+    container_name: jboss-fuse-7.0.1
+    build: ./jboss-fuse-7.0.1
+    image: jboss/fuse:7.0.1
+    volumes:
+      - /home/ihsan/Documents/docker/docker-redhat-jboss/jboss-fuse-7.0.1/deploy:/opt/jboss/jboss-fuse/deploy
+    ports:
+      - "8181:8181"
+      - "8101:8101" 
+      - "1099:1099" 
+      - "44444:44444" 
+      - "61616:61616"
+    networks:
+      - default
   wildfly:
     container_name: ${CONTAINER_NAME_WILDFLY}
     build: ./wildfly
