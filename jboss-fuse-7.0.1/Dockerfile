@@ -52,5 +52,6 @@ CMD $JBOSS_HOME/bin/fuse server
 #     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http4 && \
 #     ./client -a 8101 -h localhost -u admin -p admin features:install camel-jetty && \
 #     ./client -a 8101 -h localhost -u admin -p admin features:install camel-jsonpath && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-cxf
-
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-cxf &&\
+#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-activemq && \
+#     ./client -a 8101 -h localhost -u admin -p admin features:install activemq-client
