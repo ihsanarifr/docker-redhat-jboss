@@ -21,6 +21,15 @@ services:
       - "10190:9990"
     networks:
       - default
+  jboss-datavirtualization:
+    container_name: ${CONTAINER_NAME_JBOSS_DATAVIRTUALIZATION}
+    build: ./jboss-datavirtualization
+    image: jboss/datavirtualization:${JBOSS_DATAVIRTUALIZATION_VERSION}
+    ports:
+      - "8380:8080" 
+      - "10290:9990"
+    networks:
+      - default
   jboss-fuse:
     container_name: ${CONTAINER_NAME_JBOSS_FUSE}
     build: ./jboss-fuse
@@ -31,6 +40,7 @@ services:
       - "8181:8181"
       - "8101:8101" 
       - "1099:1099" 
+      - "8161:8161"
       - "44444:44444" 
       - "61616:61616"
     networks:
@@ -41,9 +51,12 @@ services:
     image: jboss/fuse:7.0.1
     volumes:
       - /home/ihsan/Documents/docker/docker-redhat-jboss/jboss-fuse-7.0.1/deploy:/opt/jboss/jboss-fuse/deploy
+    links:
+      - jboss-eap
     ports:
       - "8181:8181"
-      - "8101:8101" 
+      - "8101:8101"
+      - "8161:8161" 
       - "1099:1099" 
       - "44444:44444" 
       - "61616:61616"
