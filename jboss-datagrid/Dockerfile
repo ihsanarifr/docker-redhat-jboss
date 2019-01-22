@@ -4,7 +4,7 @@ FROM jboss/base-jdk:8
 MAINTAINER Ihsan Arif Rahman <ihsanarif@gmail.com>
 
 # Set the JBOSS_VERSION env variable
-ENV JBOSS_VERSION 7.1
+ENV JBOSS_VERSION 7.2.0-server
 ENV JBOSS_HOME /opt/jboss/jboss-datagrid
 
 USER root
@@ -29,7 +29,7 @@ USER jboss
 RUN $JBOSS_HOME/bin/add-user.sh admin Admin#007 --silent
 
 # Expose the ports we're interested in
-EXPOSE 8080 9990
+EXPOSE 8080 9990 11222
 
 # Set the default command to run on boot
 # This will boot JBoss EAP in the standalone mode and bind to all interface

@@ -8,6 +8,7 @@ services:
     ports:
       - "8180:8080" 
       - "10090:9990"
+      - "11222:11222"
     networks:
       - default
   jboss-eap:
@@ -53,6 +54,7 @@ services:
       - /home/ihsan/Documents/docker/docker-redhat-jboss/jboss-fuse-7.0.1/deploy:/opt/jboss/jboss-fuse/deploy
     links:
       - jboss-eap
+      - jboss-datagrid
     ports:
       - "8181:8181"
       - "8101:8101"

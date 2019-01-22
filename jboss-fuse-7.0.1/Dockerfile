@@ -44,14 +44,5 @@ EXPOSE 8181 8101 1099 44444 61616
 CMD $JBOSS_HOME/bin/fuse server
 
 # After run install feature
-# CMD cd $JBOSS_HOME/bin && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-sql && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-gson && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-servlet && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-http4 && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-jetty && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-jsonpath && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-cxf &&\
-#     ./client -a 8101 -h localhost -u admin -p admin features:install camel-activemq && \
-#     ./client -a 8101 -h localhost -u admin -p admin features:install activemq-client
+CMD cd $JBOSS_HOME/bin && \
+    ./client -a 8101 -h localhost -u admin -p admin features:install camel-sql camel-gson camel-servlet camel-http camel-http4 camel-jetty camel-jsonpath camel-cxf camel-activemq activemq-client camel-infinispan
